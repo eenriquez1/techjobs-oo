@@ -9,7 +9,7 @@ import java.util.HashMap;
 /**
  * Created by LaunchCode
  */
-public class JobData {
+public class    JobData {
 
     private ArrayList<Job> jobs = new ArrayList<>();
     private static JobData instance;

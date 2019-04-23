@@ -28,6 +28,13 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
+    @NotNull
+    private int locationID;
+    @NotNull
+    private int skillID;
+    @NotNull
+    private int positionTypeID;
+
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
     private ArrayList<CoreCompetency> coreCompetencies;
@@ -42,7 +49,34 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
+    }
+
+    public int getLocationID() {
+        return locationID;
+    }
+
+    public void setLocationID(int locationID) {
+        this.locationID = locationID;
+    }
+
+    public int getSkillID() {
+        return skillID;
+    }
+
+    public void setSkillID(int skillID) {
+        this.skillID = skillID;
+    }
+
+    public int getPositionTypeID() {
+        return positionTypeID;
+    }
+
+    public void setPositionTypeID(int positionTypeID) {
+        this.positionTypeID = positionTypeID;
     }
 
     public String getName() {
